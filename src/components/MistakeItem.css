@@ -1,0 +1,134 @@
+.mistake-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.mistake-item + .mistake-item {
+  margin-top: 8px;
+}
+
+.mistake-item-editing {
+  background: #fbfcfe;
+  border-color: var(--primary);
+}
+
+.mistake-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.mistake-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.cat-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  background: #eef1f5;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* 一些温和的分类色阶 */
+.cat-tag.cat-map_awareness { background: #e6f0ff; color: #2559c7; }
+.cat-tag.cat-positioning { background: #e7f4ec; color: var(--win); }
+.cat-tag.cat-teamfight { background: #fbeaea; color: var(--lose); }
+.cat-tag.cat-laning { background: #fff7e0; color: #7a5b12; }
+.cat-tag.cat-resources { background: #eef8f0; color: #2f8a5c; }
+.cat-tag.cat-mechanics { background: #f0edfa; color: #5b3ec4; }
+.cat-tag.cat-build { background: #fdf0e6; color: #a25625; }
+.cat-tag.cat-decision { background: #eaf2fb; color: #2f6feb; }
+.cat-tag.cat-communication { background: #fbe9f2; color: #a83a76; }
+.cat-tag.cat-other { background: #eef1f5; color: var(--text-secondary); }
+
+.moment-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #eef1f5;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.mistake-item-buttons {
+  margin-left: auto;
+  display: inline-flex;
+  gap: 4px;
+}
+
+.icon-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover,
+.icon-btn:focus {
+  background: #f0f2f6;
+  color: var(--text);
+  outline: none;
+}
+
+.icon-btn.danger:hover,
+.icon-btn.danger:focus {
+  color: var(--lose);
+}
+
+.mistake-body {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.mistake-line + .mistake-line {
+  margin-top: 4px;
+}
+
+.mistake-label {
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.mistake-text {
+  display: inline;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.mistake-item-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+@media (max-width: 560px) {
+  .mistake-form-row {
+    grid-template-columns: 1fr;
+  }
+  .mistake-item-actions .btn {
+    flex: 1;
+  }
+}

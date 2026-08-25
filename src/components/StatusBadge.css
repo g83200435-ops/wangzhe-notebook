@@ -1,0 +1,25 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  background: #eef1f5;
+  color: var(--text-secondary);
+}
+
+.status-badge.done {
+  background: var(--win-bg);
+  color: var(--win);
+}
+
+.status-badge.todo {
+  background: #fff7e0;
+  color: #7a5b12;
+}
+
+.status-badge .count {
+  color: inherit;
+  opacity: 0.85;
+}
